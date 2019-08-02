@@ -23,14 +23,18 @@
     <link rel="stylesheet" href="/resources/assets/vendor/charts/morris-bundle/morris.css">
     <link rel="stylesheet" href="/resources/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
 	<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/daterangepicker/daterangepicker.css" />
-   
-
-
+  
 <title>Spring Boot</title>
 </head>
 
 <body>
 
+<script>
+
+function sharetwitter(url, text){
+	window.open("https://twitter.com/intent/tweet?text="+text+"&url="+url);
+}
+</script>
 <%
 DTO dto=(DTO)request.getAttribute("svcInfo");
 int id=dto.getId();
@@ -115,9 +119,9 @@ String content=dto.getContent();
 									</table>
 									</form>
 
-  <h2>내용</h2>
-  <h2>세부 컨텐츠 html들어갈곳</h2>
-  <h2>댓글</h2>
+  <h1>내용</h1>
+  <h2>[세부 컨텐츠 에치티엠엘 들어갈곳]</h2>
+  <h1>댓글</h1>
   
 <% 
 
@@ -133,7 +137,19 @@ for(int i=0;i<list.size();i++){
 %>
 <h4># <%=seq_comment %> th 댓글 by <%=nickname_comment %> : <%=content_comment %> registered <%=reg_date_comment %></h4>
 <%} %>
-      <script src="/resources/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+		<div class="form-group">
+              <label for="exampleFormControlTextarea1">댓글 칸</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <button type="button" class="btn btn-primary">Go!</button>
+        </div>
+        
+        
+       <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')">공유하기</a>
+        
+        
+        
+   <script src="/resources/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="/resources/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/resources/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="/resources/assets/vendor/gauge/gauge.min.js"></script>
