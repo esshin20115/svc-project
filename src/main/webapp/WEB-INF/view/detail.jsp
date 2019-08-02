@@ -34,6 +34,9 @@
 function sharetwitter(url, text){
 	window.open("https://twitter.com/intent/tweet?text="+text+"&url="+url);
 }
+function sharefacebook(url, text){
+	window.open("http://www.facebook.com/sharer/sharer.php?u="+url);
+}
 </script>
 <%
 DTO dto=(DTO)request.getAttribute("svcInfo");
@@ -145,8 +148,8 @@ for(int i=0;i<list.size();i++){
         </div>
         
         
-       <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')">공유하기</a>
-        
+       <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')">트위터 공유하기 나중에 새 로고 추가!</a>
+       <a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')">페북 공유하기 나중에 페북 로고 추가!</a>
         
         
    <script src="/resources/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
