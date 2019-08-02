@@ -62,7 +62,7 @@ String content=dto.getContent();
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" href="index.html">SKCC SVC 크라우드 펀딩!</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -270,6 +270,24 @@ for(int i=0;i<list.size();i++){
         
        <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')">트위터 공유하기 나중에 새 로고 추가!</a>
        <a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')">페북 공유하기 나중에 페북 로고 추가!</a>
+        
+        
+         <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                             SKCC SVC Project 
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
         
    <script src="/resources/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
