@@ -65,29 +65,10 @@ String content=dto.getContent();
  
 
   function addReply(id){
-/*  var html = $("#replyTB").html();
- 	var html = ""; 
- 	for(int i=0; i<data.length; i++){
- 		html += 
- 	}
- 	추가된 한건html += "<tr>"+data.dfj+"
+
+ 	var html = "";
+ 	 
  	
- 	for(int i=0;i<list.size();i++){
-  	DTO_comment row_data = list.get(i);
-  	int seq_comment=row_data.getSeq();
-  	int id_comment=row_data.getId();
- 	String nickname_comment=row_data.getNickname();
- 	String content_comment=row_data.getContent();
- 	String reg_date_comment=row_data.getReg_date();
- 	
- 	$("#replyTB").html(html);
- */ 
- 	/* var reg_nickname=document.all.reg_nickname.value;
- 	var reg_content=document.all.reg_content.value;
- 	 *//* var form={
- 		nickname=reg_nickname,
- 		content=reg_content
- 	} */
  	var param={
  		'nickname':document.all.reg_nickname.value,
  		'content': document.all.reg_content.value,
@@ -100,7 +81,29 @@ String content=dto.getContent();
  		data: param,
  		
  	    success:function(data){
- 	      
+ 	    	html+="<";
+ 	 	     html+="%";
+ 	 	     html+="List<DTO_comment> list = (List<DTO_comment>)(data); \n";
+ 	 	     html+="for(int i=0;i<list.size();i++){";
+ 	 	     html+="DTO_comment row_data = list.get(i);";
+ 	 	     html+="int seq_comment=row_data.getSeq();";
+ 	 	     html+="int id_comment=row_data.getId();";
+ 	 	     html+="String nickname_comment=row_data.getNickname();";
+ 	 	     html+="String content_comment=row_data.getContent();";
+ 	 	     html+="String reg_date_comment=row_data.getReg_date();";
+ 	 	     html+=" %>";
+ 	 	     html+="<tr><td><";
+ 	 	     html+="%=nickname_comment %></td><td><"
+ 	 	     html+="%=content_comment %></td></tr><"; 
+ 		     html+="%} %> "; 
+ 		     html+="  <tr><td><input class=\"form-control\" rows=\"1\" name=\"reg_nickname\"></input></td>"; 
+ 		     html+=" <td><input class=\"form-control\" rows=\"1\" name=\"reg_content\"></input></td>";
+ 		     html+="<td><a href='javascript:addReply(<"
+ 		     html+="%=id%>);'><button type=\"button\" class=\"btn btn-primary\""
+ 		     html+=">등록!</button></a></td>"
+ 		     html+=" </tr>"; 
+ 	  
+ 	    $("#replyTB").html(html);
  	    },
  	    error:function(jqXHR, textStatus, errorThrown){
  	        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
@@ -482,7 +485,8 @@ function goMain(){
 	                                                <th class="border-0">내용</th>
 	                                            </tr>
 	                                        </thead>
-	                                        <tbody id="replyTB">             <%
+	                                        <tbody id="replyTB">      
+	                                         <%
 List<DTO_comment> list = (List<DTO_comment>)request.getAttribute("svcComment");
 for(int i=0;i<list.size();i++){
  	DTO_comment row_data = list.get(i);
@@ -505,10 +509,9 @@ for(int i=0;i<list.size();i++){
 	                                            <tr>
 	                                            	<td><input class="form-control" rows="1" name="reg_nickname"></input></td>
 	                                                <td><input class="form-control" rows="1" name="reg_content"></input></td>
-	                                                <td><a href="javascript:addReply(<%=id%>);"><button type="button" class="btn btn-primary">등록!</button></a></td>
+	                                                <td><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
 	                                            </tr>
-	                                       
-	                                            
+	                                        
 	                                        </tbody>
 	                                    </table>
 	                                </div>
