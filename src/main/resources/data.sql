@@ -1,4 +1,4 @@
-insert into svc_table values(1,'첫번째 후원 제목','2019-02-23','2019-01-23',3,2000000,4000000,1,'HANA','123-1230-12343','1111');
+insert into svc_table values(1,'첫번째 후원 제목','2019-02-23','2019-01-23',3,2000000,4000000,1,'HANA','123-1230-12343','https://www.worldvision.or.kr/index.asp');
 insert into svc_table values(
 	2,
 	'두번째 후원 제목',
@@ -10,7 +10,7 @@ insert into svc_table values(
 	4,
 	'HANA',
 	'345-3453-23423',
-	'2222'	
+	'https://www.sc.or.kr/'	
 );
 insert into svc_table values(
 	3,
@@ -23,7 +23,7 @@ insert into svc_table values(
 	8,
 	'HAVA',
 	'456-3233-23563',
-	'60000'	
+	'https://www.sc.or.kr/'	
 );
 insert into svc_table values(
 	4,
@@ -36,7 +36,7 @@ insert into svc_table values(
 	2,
 	'HAVA',
 	'123-456-547456',
-	'1364356'	
+	'https://www.worldvision.or.kr/index.asp'	
 );
 insert into svc_table values(
 	5,
@@ -49,7 +49,7 @@ insert into svc_table values(
 	8,
 	'HAVA',
 	'245-6456-76433',
-	'234500'	
+	'https://www.sc.or.kr/'	
 );
 insert into svc_table values(
 	6,
@@ -62,7 +62,7 @@ insert into svc_table values(
 	44,
 	'HAVA',
 	'654-5423-245743',
-	'34563456'	
+	'https://www.worldvision.or.kr/index.asp'	
 );
 insert into svc_comments values(
 	default,

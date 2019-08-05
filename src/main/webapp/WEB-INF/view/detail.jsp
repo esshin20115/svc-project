@@ -362,6 +362,7 @@ function goMain(){
 						                          <div class="card">
 						                              <h5 class="card-header">Completion Rate</h5>
 						                              <div class="card-body">
+						                           
 						                                  <canvas id="gauge2"></canvas>
 						                              </div>
 						                          </div>
@@ -455,12 +456,14 @@ function goMain(){
 	                        <!-- ============================================================== -->
 	                        <!-- followers by locations   -->
 	                        <!-- ============================================================== -->
-	                        <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12 col-12">
+	                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	                            <div class="card">
 	                                <h5 class="card-header"> 후원 상세 내용! </h5>
 	                                <div class="card-body">
-	                                    <canvas id="chartjs_bar_horizontal"></canvas>
-	                                </div>
+	                                    <!-- <canvas id="chartjs_bar_horizontal"></canvas> -->
+	                                	
+	                                	<iframe src="<%=content%>" frameborder="0" width="900" height="300" marginwidth="0" marginheight="0"  scrolling="yes"></iframe>
+	                                 </div>
 	                            </div>
 	                        </div>
 	                        <!-- ============================================================== -->

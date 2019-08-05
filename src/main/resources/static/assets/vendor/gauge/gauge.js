@@ -1,8 +1,10 @@
 
+
+
+
 $(function() {
     "use strict";
-
-
+    
 var opts = {
         angle: 0.35, // The span of the gauge arc
         lineWidth: 0.1, // The line thickness
@@ -32,12 +34,14 @@ var opts = {
         }
 
     }; 
-    var target = document.getElementById('gauge2'); // your canvas element
+    var target = document.getElementById('gauge2');// your canvas element
+
     var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
-    gauge.maxValue = 3000; // set max gauge value
+    gauge.maxValue = '<%=goal_fund%>'; // set max gauge value
+    console.log(gauge.maxValue);
     gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gauge.animationSpeed = 32; // set animation speed (32 is default value)
-    gauge.set(1675); // set actual value
+    gauge.set(cur_fund); // set actual value
 
 
 
