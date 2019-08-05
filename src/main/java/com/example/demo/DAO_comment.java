@@ -83,16 +83,16 @@ public class DAO_comment{
 			stmt=con.createStatement();
 			StringBuilder sb = new StringBuilder();
 			String sql = sb.append("insert into svc_comments values( default, ")
-		             .append(" id = ")
+		             //.append(" id = ")
 		             .append(idx)
 		             
-		             .append(", nickname = ")
+		             .append(", '")
 		             .append(reg_nickname)
-		             .append(", content = ")
+		             .append("' , '")
 		             .append(reg_content)
-		             .append(", reg_date = ")
+		             .append("' , '")
 		             .append("2019-01-03")
-		             .append(";").toString();
+		             .append("');").toString();
 		  
 	    	 
 	    	 
