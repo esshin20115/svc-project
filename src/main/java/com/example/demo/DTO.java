@@ -57,6 +57,15 @@ public class DTO{
 	public int getLikes() {
 		return likes;
 	}
+	
+//	public void setLikes() {
+//		
+//		
+//
+//		System.out.println("likes"+this.likes);
+//		this.likes=this.getLikes()+1;
+//	}
+	
 	public String getAccount_src() {
 		
 		return account_src;

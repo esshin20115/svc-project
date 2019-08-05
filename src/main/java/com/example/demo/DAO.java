@@ -1,10 +1,12 @@
 package com.example.demo;
 
 import java.sql.Connection; 
+
 import java.sql.DriverManager; 
 import java.sql.ResultSet; 
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.sql.SQLException;
 
 public class DAO{
 	private String url="jdbc:h2:mem:testdb";
@@ -32,7 +34,7 @@ public class DAO{
 			
 			con=DriverManager.getConnection(url,uid,upw);
 			stmt=con.createStatement();
-			rs=stmt.executeQuery("select * from svc_table");
+			rs=stmt.executeQuery("select * from svc_table order by id ASC");
 			
 			while(rs.next()) {
 				int id=rs.getInt("id");
@@ -79,7 +81,7 @@ public class DAO{
 			
 			con=DriverManager.getConnection(url,uid,upw);
 			stmt=con.createStatement();
-			rs=stmt.executeQuery("select * from svc_table");
+			rs=stmt.executeQuery("select * from svc_table order by id ASC");
 			
 			while(rs.next()) {
 				int id=rs.getInt("id");
@@ -117,5 +119,48 @@ public class DAO{
 		}
 		return dto;
 	}
+public int update_likes(int idx) {
+	
+	DTO dto = null;
+	Connection con=null;
+	Statement stmt=null;
+	ResultSet rs=null;
+	int new_like=0;
+	int likes=0;
+	try {
+		con=DriverManager.getConnection(url,uid,upw);
+		stmt=con.createStatement();
+		rs=stmt.executeQuery("select * from svc_table order by id ASC");
+		
+		while(rs.next()) {
+			int id=rs.getInt("id");
+			if(id!=idx) {
+				continue;
+			}
+			
+			likes=rs.getInt("likes");
+			break;
+		}
+		new_like=likes+1;
+		con=DriverManager.getConnection(url,uid,upw);
+		stmt=con.createStatement();
+		StringBuilder sb = new StringBuilder();
+		String sql = sb.append("UPDATE svc_table SET")
+	             .append(" likes = "+ new_like)
+	             .append(" WHERE id = ")
+	             .append(idx)
+	             .append(";").toString();
+	  
+    	 
+    	 
+         stmt.executeUpdate(sql);
+         
+	}catch (SQLException e) {
+        
+         e.printStackTrace();
+     }
+	return new_like;
+	}
+	
 	
 }
