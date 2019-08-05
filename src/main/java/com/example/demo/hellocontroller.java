@@ -44,30 +44,4 @@ public class hellocontroller{
 	}
 	 
 	
-//	@GetMapping("/test")
-//	public  ModelAndView sayHello2(int id) {
-//		DAO tableDAO=new DAO();
-//		System.out.println(id);
-//		DTO dto=tableDAO.memberSelect_detail(id);
-//		dto.setLikes();
-//		ModelAndView mav= new ModelAndView("detail");
-//		mav.addObject("svcInfo",dto);
-//
-//		DAO_comment tableDAO_comment=new DAO_comment();
-//		ArrayList<DTO_comment> dtos=tableDAO_comment.memberSelect(id);
-//		//ModelAndView mav_comment= new ModelAndView("detail");
-//		mav.addObject("svcComment",dtos);
-//		return mav;
-//		
-//	}
-	
-//	@GetMapping("/test")
-//	public ModelAndView sayHello2(int id) {
-//		DAO tableDAO=new DAO();
-//		DTO dto=tableDAO.memberSelect_detail(id);
-//		//return dto;
-//		ModelAndView mav= new ModelAndView("detail2");
-//		mav.addObject("svcInfo",dto);
-//		return mav;
-//	}
 }

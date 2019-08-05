@@ -1,7 +1,4 @@
 
-
-
-
 $(function() {
     "use strict";
     
@@ -37,8 +34,9 @@ var opts = {
     var target = document.getElementById('gauge2');// your canvas element
 
     var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
-    gauge.maxValue = '<%=goal_fund%>'; // set max gauge value
-    console.log(gauge.maxValue);
+    gauge.maxValue = goal_fund; // set max gauge value
+    console.log(goal_fund);
+    console.log(cur_fund);
     gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gauge.animationSpeed = 32; // set animation speed (32 is default value)
     gauge.set(cur_fund); // set actual value

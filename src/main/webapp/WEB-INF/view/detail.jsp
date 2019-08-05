@@ -7,25 +7,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/resources/assets/vendor/bootstrap/css/bootstrap.min.css">
-<link href="/resources/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-<link rel="stylesheet" href="/resources/assets/libs/css/style.css">
-<link rel="stylesheet" href="/resources/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-
-<link rel="stylesheet" href="/resources/assets/vendor/vector-map/jqvmap.css">
-<link href="/resources/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
-<link rel="stylesheet" href="/resources/assets/vendor/charts/chartist-bundle/chartist.css">
-<link rel="stylesheet" href="/resources/assets/vendor/charts/c3charts/c3.css">
-<link rel="stylesheet" href="/resources/assets/vendor/charts/morris-bundle/morris.css">
-<link rel="stylesheet" href="/resources/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
-<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/daterangepicker/daterangepicker.css" />  
-
-	                                                     
-	
 <%
 DTO dto=(DTO)request.getAttribute("svcInfo");
 int id=dto.getId();
@@ -41,11 +22,28 @@ String account_num=dto.getAccount_num();
 String content=dto.getContent();
 
 %>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/resources/assets/vendor/bootstrap/css/bootstrap.min.css">
+<link href="/resources/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+<link rel="stylesheet" href="/resources/assets/libs/css/style.css">
+<link rel="stylesheet" href="/resources/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+
+<link rel="stylesheet" href="/resources/assets/vendor/vector-map/jqvmap.css">
+<link href="/resources/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+<link rel="stylesheet" href="/resources/assets/vendor/charts/chartist-bundle/chartist.css">
+<link rel="stylesheet" href="/resources/assets/vendor/charts/c3charts/c3.css">
+<link rel="stylesheet" href="/resources/assets/vendor/charts/morris-bundle/morris.css">
+<link rel="stylesheet" href="/resources/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/daterangepicker/daterangepicker.css" />  
+	
+
 
  <script>
 
  function plusLike(id){
- 	console.log(id);
+ 	
  	$.ajax({
  	    url:"pluslike?id="+id,
  	    type:'GET',
@@ -134,7 +132,7 @@ function sharefacebook(url, text){
 }
 
 function thumbs_up(id){
-	console.log(id);
+	
 	document.location.href="/detail?id="+id+"&flag="+1;
 }
 function goMain(){
@@ -584,7 +582,9 @@ for(int i=0;i<list.size();i++){
     <script src="/resources/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/resources/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="/resources/assets/vendor/gauge/gauge.min.js"></script>
-     <script src="/resources/assets/vendor/gauge/gauge.js"></script>
+<script src="/resources/assets/vendor/gauge/gauge.js"></script>                                                 
+    
+    
     <script src="/resources/assets/libs/js/main-js.js"></script>
    <script src="/resources/board.js"></script>
    
