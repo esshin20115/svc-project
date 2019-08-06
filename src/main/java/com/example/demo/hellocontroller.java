@@ -17,7 +17,7 @@ public class hellocontroller{
 	public ModelAndView index( Model model,ModelMap modelmap) {
 		DAO tableDAO=new DAO();
 		ArrayList<DTO> dtos=tableDAO.memberSelect();
-		ModelAndView mav = new ModelAndView("index");
+		ModelAndView mav = new ModelAndView("main");
 		mav.addObject("svcInfoList", dtos);
 		return mav;
 	}
