@@ -105,7 +105,25 @@ function goStructure(){
         <!-- end left sidebar -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-
+		 <div class="dashboard-wrapper">
+		            <div class="dashboard-ecommerce">
+		                <div class="container-fluid dashboard-content ">
+		                    <!-- ============================================================== -->
+		                    <!-- pageheader  -->
+		                    <!-- ============================================================== -->
+		                    <div class="row">
+		                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		                            <div class="page-header">
+		                                <h2 class="pageheader-title">웹페이지의 소개</h2>
+		                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+		                                
+		                            </div>
+		                        </div>
+		                    </div>
+							웹페이지 소개 같은거를 정리할 페이지 크라우드 펀딩을 통해서 뭘 하려구 하는지 그른걸 정리하믄 될것 같음
+						</div>
+					</div>
+				</div>
 
  
 </body>>

@@ -105,9 +105,25 @@ function goStructure(){
         <!-- end left sidebar -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-
-웹페이지 구조 어떤 식으로 구성했는지 쓰는 부분
-controller에서 jsp 불러서 rest controller 불러서 처리하구 그런거를 다이어그램으로 만들어서jpg 같은걸루 export해서
-붙이고
- 
+		 <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">웹페이지의 구조</h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+					웹페이지 구조 어떤 식으로 구성했는지 쓰는 부분
+					controller에서 jsp 불러서 rest controller 불러서 처리하구 그런거를 다이어그램으로 만들어서jpg 같은걸루 export해서
+					붙이고
+				</div>
+			</div>
+		</div>
 </body>>
