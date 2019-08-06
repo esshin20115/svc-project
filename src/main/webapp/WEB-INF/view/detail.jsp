@@ -82,32 +82,22 @@ cur_fund=<%=cur_fund%>;
  		url:"reply",
  		type:'POST',
  		data: param,
- 		
- 	    success:function(data){
- 	    	html+="<";
- 	 	     html+="%";
- 	 	     html+="List<DTO_comment> list = (List<DTO_comment>)(data); \n";
- 	 	     html+="for(int i=0;i<list.size();i++){";
- 	 	     html+="DTO_comment row_data = list.get(i);";
- 	 	     html+="int seq_comment=row_data.getSeq();";
- 	 	     html+="int id_comment=row_data.getId();";
- 	 	     html+="String nickname_comment=row_data.getNickname();";
- 	 	     html+="String content_comment=row_data.getContent();";
- 	 	     html+="String reg_date_comment=row_data.getReg_date();";
- 	 	     html+=" %>";
- 	 	     html+="<tr><td><";
- 	 	     html+="%=nickname_comment %></td><td><"
- 	 	     html+="%=content_comment %></td></tr><"; 
- 		     html+="%} %> "; 
- 		     html+="  <tr><td><input class=\"form-control\" rows=\"1\" name=\"reg_nickname\"></input></td>"; 
- 		     html+=" <td><input class=\"form-control\" rows=\"1\" name=\"reg_content\"></input></td>";
- 		     html+="<td><a href='javascript:addReply(<"
- 		     html+="%=id%>);'><button type=\"button\" class=\"btn btn-primary\""
- 		     html+=">등록!</button></a></td>"
- 		     html+=" </tr>"; 
- 	  
- 	    $("#replyTB").html(html);
- 	    },
+ 		success:function(data){
+ 			
+ 			 
+ 			for(var i=0; i<data.length; i++){
+	     		html += "<tr><td>"; 
+  	    		html += data[i].nickname+"</td><td>";
+  	    		html += data[i].content+"</td></tr>"; 
+  	    	} 
+   	    	 
+  	  	 		     html+=" </tr>";
+  			 
+ 			
+  	    	 		  $("#replyTB").html(html);
+  	    	
+ 	
+ 	    },	
  	    error:function(jqXHR, textStatus, errorThrown){
  	        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
  	        self.close();
@@ -359,19 +349,14 @@ function goMain(){
 	                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	                        <div class="card influencer-profile-data">
 	                            <div class="card-body">
-	                                <div class="row">
-	                                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
-	                                        <div class="text-center">    
-						                          <div class="card">
+	                               <div class="row">
+	                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+					                          <div class="card">
 						                              <h5 class="card-header">Completion Rate</h5>
-						                              <div class="card-body">
-						                    <%--               <input type="hidden" id="goal_fund" value="<%=goal_fund %>">
-						                                  <input type="hidden" id="cur_fund" value="<%=cur_fund %>"> --%>
-						                                  <canvas id="gauge2"></canvas>
-						                                  
+						                              <div class="card-body" >
+						                    				<canvas id="gauge2"></canvas>  
 						                              </div>
-						                          </div>
-                                            </div>   
+	                                            </div>   
 	                                    </div> 
 	                                     <div class="col-xl-10 col-lg-8 col-md-8 col-sm-8 col-12">
 	                                            <div class="user-avatar-info">
@@ -386,33 +371,28 @@ function goMain(){
 	                                                <br>
 	                                                    <p class="border-bottom pb-3">
 	                                                    
-	                                                     <table class="table">
-	                                      			
-															<tbody>
-																<tr class="border-0">
-					                                                <td class="border-0">후원 등록일:</td>
-					                                                <td class="border-0"><%=submission_date %></td>
-					                                            </tr>
-																<tr class="border-0">
-					                                                <td class="border-0" id="likeNum"> <%=likes %> 명이 이 후원을 좋아해요! </td>
-					                                            </tr>
-					                                            <tr class="border-0">
-					                                                <td class="border-0" >후원을 하시려면 <%=account_src %> 은행<br>  <%=account_num %> 으로 입금해주세요!  </td>
-					                                            </tr>
-					                                            <tr class="border-0">
-					                                               
-					                                                <td class="border-0" >공유하기  <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/facebook.png"/></a>  </td>
-					                                            </tr>
-					                                            <tr class="border-0">
-					                                                <td class="border-0" >이 후원이 좋아요!<a href="javascript:plusLike(<%=id%>);"><img src="resources/assets/images/thumb.png"/></a>  </td>
-					                                            </tr>
-																												
-															</tbody>
-														</table>
-																
-	                                                     
-	                                                       
-	                                                        <%-- <a href="javascript: plusLike(<%=id %>,<%=likes %>);">test_ajax</a> --%>
+		                                                     <table class="table">
+		                                      			
+																<tbody>
+																	<tr class="border-0">
+						                                                <td class="border-0">후원 등록일:</td>
+						                                                <td class="border-0"><%=submission_date %></td>
+						                                            </tr>
+																	<tr class="border-0">
+						                                                <td class="border-0" id="likeNum"> <%=likes %> 명이 이 후원을 좋아해요! </td>
+						                                            </tr>
+						                                            <tr class="border-0">
+						                                                <td class="border-0" >후원을 하시려면 <%=account_src %> 은행<br>  <%=account_num %> 으로 입금해주세요!  </td>
+						                                            </tr>
+						                                            <tr class="border-0">
+						                                               
+						                                                <td class="border-0" >공유하기  <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/facebook.png"/></a>  </td>
+						                                            </tr>
+						                                            <tr class="border-0">
+						                                                <td class="border-0" >이 후원이 좋아요!<a href="javascript:plusLike(<%=id%>);"><img src="resources/assets/images/thumb.png"/></a>  </td>
+						                                            </tr>												
+																</tbody>
+															</table>
 	                                                      </p>
 	                                                </div>
 	                                            </div>
@@ -513,7 +493,7 @@ function goMain(){
 	                                            </tr>
 	                                        </thead>
 	                                        <tbody id="replyTB">      
-	                                         <%
+	                                                                           <%
 List<DTO_comment> list = (List<DTO_comment>)request.getAttribute("svcComment");
 for(int i=0;i<list.size();i++){
  	DTO_comment row_data = list.get(i);
@@ -533,13 +513,14 @@ for(int i=0;i<list.size();i++){
 	                                            
 	                                            </tr>
 	                                            <%} %> 
-	                                            <tr>
-	                                            	<td><input class="form-control" rows="1" name="reg_nickname"></input></td>
-	                                                <td><input class="form-control" rows="1" name="reg_content"></input></td>
-	                                                <td><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
-	                                            </tr>
+	                                            
 	                                        
 	                                        </tbody>
+	                                        <tr>
+	                                            	<td><input class="form-control" rows="1" name="reg_nickname" value=""></input></td>
+	                                                <td><input class="form-control" rows="1" name="reg_content" value=""></input></td>
+	                                                <td><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
+	                                            </tr>
 	                                    </table>
 	                                </div>
 	                            </div>
@@ -567,6 +548,7 @@ for(int i=0;i<list.size();i++){
 					                                <a href="javascript: void(0);">About</a>
 					                                <a href="javascript: void(0);">Support</a>
 					                                <a href="javascript: void(0);">Contact Us</a>
+	
 					                            </div>
 					                        </div>
 					                    </div>
@@ -582,6 +564,9 @@ for(int i=0;i<list.size();i++){
 	                    </div>
 	                    <!-- ============================================================== -->
 	                    <!-- end main wrapper  --> <!-- ============================================================== -->
+	                    
+	                  
+	                    
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
     <script src="/resources/assets/vendor/jquery/jquery-3.3.1.min.js"></script>

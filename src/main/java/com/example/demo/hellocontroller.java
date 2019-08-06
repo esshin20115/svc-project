@@ -26,9 +26,7 @@ public class hellocontroller{
 	public ModelAndView sayHello(int id,int flag) {
 		DAO tableDAO=new DAO();
 		DTO dto=tableDAO.memberSelect_detail(id);
-		System.out.println(id+"     "+flag);
 		if(flag==1) {
-			System.out.println("flag"+flag);
 			//tableDAO.update_likes(id,dto.getLikes());
 		}
 		tableDAO=new DAO();

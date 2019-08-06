@@ -21,12 +21,11 @@ public class svcRestController {
 	
 	@RequestMapping(value="/reply",method=RequestMethod.POST)
 	public ArrayList<DTO_comment> reply(String nickname, String content,int id) {
-	//DAO_comment tableDAO_comment=new DAO_comment();
-	//System.out.println("nickname"+nickname+"content"+content+"id"+id);
+
 	DAO_comment tableDAO_comment=new DAO_comment();
 	ArrayList<DTO_comment> dtos=tableDAO_comment.memberSelect(id);
 	dtos=tableDAO_comment.Add_comment(id,nickname,content);
-	//System.out.println(dtos);
+	System.out.print(dtos);
 	return dtos;
 	}
 	
