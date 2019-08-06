@@ -56,7 +56,8 @@ function goStructure(){
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand"  href="javascript:goMain();">SK주식회사 C&C 행복 펀딩!</a>
+                <a class="navbar-brand"  href="javascript:goMain();"><img src=/resources/assets/images/sklogo.png>       행복 펀딩!</a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -105,9 +106,23 @@ function goStructure(){
         <!-- end left sidebar -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-
-웹페이지 구조 어떤 식으로 구성했는지 쓰는 부분
-controller에서 jsp 불러서 rest controller 불러서 처리하구 그런거를 다이어그램으로 만들어서jpg 같은걸루 export해서
-붙이고
- 
+		 <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">SVC Project 의 구조</h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <img src=/resources/assets/images/svc.png>
+				</div>
+			</div>
+		</div>
 </body>>
