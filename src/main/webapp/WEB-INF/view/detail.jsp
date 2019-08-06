@@ -22,6 +22,11 @@ String account_num=dto.getAccount_num();
 String content=dto.getContent();
 
 %>
+
+<script>
+goal_fund=<%=goal_fund%>;
+cur_fund=<%=cur_fund%>;
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
@@ -360,8 +365,10 @@ function goMain(){
 						                          <div class="card">
 						                              <h5 class="card-header">Completion Rate</h5>
 						                              <div class="card-body">
-						                           
+						                    <%--               <input type="hidden" id="goal_fund" value="<%=goal_fund %>">
+						                                  <input type="hidden" id="cur_fund" value="<%=cur_fund %>"> --%>
 						                                  <canvas id="gauge2"></canvas>
+						                                  
 						                              </div>
 						                          </div>
                                             </div>   
