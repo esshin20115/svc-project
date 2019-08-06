@@ -378,13 +378,32 @@ function goMain(){
 	                                                <br>
 	                                                <br>
 	                                                    <p class="border-bottom pb-3">
-	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">후원 등록일: <%=submission_date %>  </span><br>
-	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">후원 마감일: <%=due_date %>  </span><br>
-	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4" id="likeNum"> <%=likes %> 명이 이 후원을 좋아해요! </span><br>
-	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4"> 후원을 하시려면 <%=account_src %> 은행  <%=account_num %> 으로 입금해주세요! </span><br>
-	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">공유하기 <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/facebook.png"/></a> </span><br>
-	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">이 후원이 좋아요!<a href="javascript:plusLike(<%=id%>);"><img src="resources/assets/images/thumb.png"/></a> </span>
-	                                                        
+	                                                    
+	                                                     <table class="table">
+	                                      			
+															<tbody>
+																<tr class="border-0">
+					                                                <td class="border-0">후원 등록일:</td>
+					                                                <td class="border-0"><%=submission_date %></td>
+					                                            </tr>
+																<tr class="border-0">
+					                                                <td class="border-0" id="likeNum"> <%=likes %> 명이 이 후원을 좋아해요! </td>
+					                                            </tr>
+					                                            <tr class="border-0">
+					                                                <td class="border-0" >후원을 하시려면 <%=account_src %> 은행<br>  <%=account_num %> 으로 입금해주세요!  </td>
+					                                            </tr>
+					                                            <tr class="border-0">
+					                                               
+					                                                <td class="border-0" >공유하기  <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/facebook.png"/></a>  </td>
+					                                            </tr>
+					                                            <tr class="border-0">
+					                                                <td class="border-0" >이 후원이 좋아요!<a href="javascript:plusLike(<%=id%>);"><img src="resources/assets/images/thumb.png"/></a>  </td>
+					                                            </tr>
+																												
+															</tbody>
+														</table>
+																
+	                                                     
 	                                                       
 	                                                        <%-- <a href="javascript: plusLike(<%=id %>,<%=likes %>);">test_ajax</a> --%>
 	                                                      </p>
