@@ -165,6 +165,7 @@ function goMain(){
                     <ul class="navbar-nav ml-auto navbar-right-top">
                     </ul>
                 </div>
+                <img src=/resources/assets/images/sklogo.png>
             </nav>
         </div>
         <!-- ============================================================== -->
