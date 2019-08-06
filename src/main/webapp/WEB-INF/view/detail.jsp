@@ -77,7 +77,7 @@ cur_fund=<%=cur_fund%>;
  		'content': document.all.reg_content.value,
  		'id':id
  	};
- 
+
  	$.ajax({
  		url:"reply",
  		type:'POST',
@@ -107,7 +107,15 @@ cur_fund=<%=cur_fund%>;
  	
  	
  	
+ 	
  	}
+  
+  function goIntro(){
+		document.location.href="/Intro";
+  }
+  function goStructure(){
+		document.location.href="/Structure";
+	}
 
 
  </script>
@@ -149,7 +157,7 @@ function goMain(){
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand"  href="javascript:goMain();">SKCC SVC 크라우드 펀딩!</a>
+                <a class="navbar-brand"  href="javascript:goMain();">SK주식회사 C&C 행복 펀딩!</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -177,106 +185,17 @@ function goMain(){
                             <li class="nav-divider">
                                 Menu
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
-                                <div id="submenu-1" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
-                                            <div id="submenu-1-2" class="collapse submenu" style="">
-                                                <ul class="nav flex-column">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="index.html">E Commerce Dashboard</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">Product List</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">Finance</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
-                                            <div id="submenu-1-1" class="collapse submenu" style="">
-                                                <ul class="nav flex-column">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                           <li class="nav-item ">
+                                <a class="nav-link" href="javascript:goIntro();"><!-- <i class="fa fa-fw fa-user-circle"> </i>-->SVC 크라우드 펀딩이란? <!-- <span class="badge badge-success">6</span> --></a>
+                       
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
-                                <div id="submenu-2" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/general.html">General</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/carousel.html">Carousel</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/listgroup.html">List Group</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/typography.html">Typography</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/accordions.html">Accordions</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/tabs.html">Tabs</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <a class="nav-link" href="javascript:goMain();"><!-- <i class="fa fa-fw fa-user-circle"> </i>-->SVC 크라우드 펀딩 Dashboard <!-- <span class="badge badge-success">6</span> --></a>
+                       			
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
-                                <div id="submenu-3" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-c3.html">C3 Charts</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-chartist.html">Chartist Charts</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-charts.html">Chart</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-morris.html">Morris</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-sparkline.html">Sparkline</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-gauge.html">Guage</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <a class="nav-link" href="javascript:goStructure();"><!-- <i class="fa fa-fw fa-user-circle"> </i>-->SVC 크라우드 펀딩 페이지 구조 <!-- <span class="badge badge-success">6</span> --></a>
+                       			
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
@@ -328,7 +247,7 @@ function goMain(){
 	                <!-- ============================================================== -->
 	                <!-- pageheader  -->
 	                <!-- ============================================================== -->
-	                <div class="row">
+<%-- 	                <div class="row">
 	                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	                        <div class="page-header">
 	                            <h3 class="mb-2"> " <%=title %> " 후원 상세 내용</h3>
@@ -336,7 +255,7 @@ function goMain(){
 	                            
 	                        </div>
 	                    </div>
-	                </div>
+	                </div> --%>
 	                <!-- ============================================================== -->
 	                <!-- end pageheader  -->
 	                <!-- ============================================================== -->
@@ -346,136 +265,114 @@ function goMain(){
 	                <!-- ============================================================== -->
 	                <!-- influencer profile  -->
 	                <!-- ============================================================== -->
-	                <div class="row">
-	                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+	                <div class="">
+<!-- 	                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"> -->
+							<div>
 	                        <div class="card influencer-profile-data">
 	                            <div class="card-body">
-	                               <div class="row">
-	                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-					                          <div class="card">
-						                              <h5 class="card-header">Completion Rate</h5>
-						                              <div class="card-body" >
-						                    				<canvas id="gauge2"></canvas>  
-						                              </div>
-	                                            </div>   
-	                                    </div> 
-	                                     <div class="col-xl-10 col-lg-8 col-md-8 col-sm-8 col-12">
+	                                <div class="">
+	                                		<div>
+	                                   <!--   <div class="col-xl-10 col-lg-8 col-md-8 col-sm-8 col-12"> -->
 	                                            <div class="user-avatar-info">
 	                                                <div class="m-b-20">
 	                                                    <div class="user-avatar-name">
-	                                                         <h2 class="mb-1"><%=title %></h2>
+	                                                         <h2 class="mb-1"><b><%=title %></b></h2>
 	                                                    </div> 
+	                                                    <div align="right">후원 등록일 : <%=submission_date %></div>
 	                                                </div>
-	                                              
-	                                                <div class="user-avatar-address">
-	                                                <br>
-	                                                <br>
-	                                                    <p class="border-bottom pb-3">
-	                                                    
-		                                                     <table class="table">
-		                                      			
-																<tbody>
-																	<tr class="border-0">
-						                                                <td class="border-0">후원 등록일:</td>
-						                                                <td class="border-0"><%=submission_date %></td>
-						                                            </tr>
-																	<tr class="border-0">
-						                                                <td class="border-0" id="likeNum"> <%=likes %> 명이 이 후원을 좋아해요! </td>
-						                                            </tr>
-						                                            <tr class="border-0">
-						                                                <td class="border-0" >후원을 하시려면 <%=account_src %> 은행<br>  <%=account_num %> 으로 입금해주세요!  </td>
-						                                            </tr>
-						                                            <tr class="border-0">
-						                                               
-						                                                <td class="border-0" >공유하기  <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/facebook.png"/></a>  </td>
-						                                            </tr>
-						                                            <tr class="border-0">
-						                                                <td class="border-0" >이 후원이 좋아요!<a href="javascript:plusLike(<%=id%>);"><img src="resources/assets/images/thumb.png"/></a>  </td>
-						                                            </tr>												
-																</tbody>
-															</table>
-	                                                      </p>
+	                                              								                                  	                                              	                                            </div>
+	                                        </div>	                                
+										<div class="row">
+					                        <!-- ============================================================== -->
+					                        <!-- four widgets   -->
+					                        <!-- ============================================================== -->
+					                        <!-- ============================================================== -->
+					                        <!-- total views   -->
+					                        <!-- ============================================================== -->
+					                        <div class="">
+					                           		<div class="card-body">
+					                                    <div margin-left="30px" class="float-left icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
+					                                        <i class="fa fa-user fa-fw fa-sm text-primary"></i>
+					                                    </div>
+					                                    &nbsp;&nbsp;					                           		
+					                             		<div class="d-inline-block" width="50%">
+					                                        <h5 class="text-muted">총 후원자수!</h5>
+					                                        <h2 class="mb-0"> <%=num_fund %> 명이 후원했어요!<h2>
+					                                    </div>
+					                                </div>
+					                        </div>
+					                        <!-- ============================================================== -->
+					                        <!-- end total views   -->
+					                        <!-- ============================================================== -->
+					                        <!-- ============================================================== -->
+					                        <!-- total followers   -->
+					                        <!-- ============================================================== -->
+					                        <div class="">
+					                                <div class="card-body">
+					                                	<div margin-left="30px" class="float-left icon-circle-medium  icon-box-lg  bg-brand-light mt-1">
+					                                        <i class="fa fa-money-bill-alt fa-fw fa-sm text-brand"></i>
+					                                   </div>
+					                                   &nbsp;&nbsp;				                                 
+					                                   <div class="d-inline-block">
+					                                        <h5 class="text-muted">후원액 현황!</h5>
+					                                        <%int diff_fund=goal_fund-cur_fund; %>
+					                                        <h3 class="mb-0"> <%=cur_fund %> 원 (<%=diff_fund%> 원이 더 필요해요!)</h3>
+					                                    </div>
+
+					                                </div>
+					                        </div>
+					                        <!-- ============================================================== -->
+					                        <!-- end total followers   -->
+					                     
+					                    </div>
+             								 <!-- ============================================================== -->
+								                    <!-- end widgets   -->
+								                    <!-- ============================================================== -->
+								                    <div class="">
+								                        <!-- ============================================================== -->
+								                        <!-- ============================================================== -->
+								                        <!-- followers by locations   -->
+								                        <!-- ============================================================== -->
+								                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								                            <div class="card">
+								                                <h5 class="card-header"> 후원 상세 내용! </h5>
+								                                <div class="card-body">
+								                                    <!-- <canvas id="chartjs_bar_horizontal"></canvas> -->
+								                                	
+								                                	<iframe src="<%=content%>" frameborder="0" width="90%" height="600" marginwidth="10" marginheight="10"  scrolling="yes"></iframe>
+								                                 </div>
+								                            </div>
+								                        </div>
+								                        <!-- ============================================================== -->
+								                        <!-- end followers by locations  -->
+								                        <!-- ============================================================== -->
+								                    </div>	                
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                                                <div class="user-avatar-address" width="100%">
+	                                                    <p class="border-bottom pb-3">	                                                    
+	                                                     <table class="table">         
+	                                                     	<colgroup>
+	                                                     		<col width="60%">
+	                                                     		<col width="40%">
+	                                                     	</colgroup>                           			
+															<tbody>
+																<tr class="border-0">
+					                                                <td class="border-0" id="likeNum"> <b><%=likes %></b> 명이 이 후원을 좋아해요! &nbsp;&nbsp; </td>
+					                                        	    <td class="border-0" aligh="right" margin-right="20px">공유하기  <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')">&nbsp;&nbsp;<img src="resources/assets/images/facebook.png"/></a>  </td>
+					                                            </tr>
+					                                            <tr>
+					                                            	<td><b>이 후원이 좋아요!<a href="javascript:plusLike(<%=id%>);"><img src="resources/assets/images/thumb.png"/></a></b></td>																											
+																</tr>
+															</tbody>
+														</table>
+	                                                    </p>
 	                                                </div>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <!-- ============================================================== -->
-	                    <!-- end influencer profile  -->
-	                    <!-- ============================================================== -->
-	                    <!-- ============================================================== -->
-	                    <!-- widgets   -->
-	                    <!-- ============================================================== -->
-	                    <div class="row">
-	                        <!-- ============================================================== -->
-	                        <!-- four widgets   -->
-	                        <!-- ============================================================== -->
-	                        <!-- ============================================================== -->
-	                        <!-- total views   -->
-	                        <!-- ============================================================== -->
-	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-	                            <div class="card">
-	                                <div class="card-body">
-	                               <div class="d-inline-block">
-	                                        <h5 class="text-muted">총 후원자수!</h5>
-	                                        <h2 class="mb-0"> <%=num_fund %> 명이 후원했어요!<h2>
-	                                    </div>
-	                                    <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
-	                                        <i class="fa fa-user fa-fw fa-sm text-primary"></i>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <!-- ============================================================== -->
-	                        <!-- end total views   -->
-	                        <!-- ============================================================== -->
-	                        <!-- ============================================================== -->
-	                        <!-- total followers   -->
-	                        <!-- ============================================================== -->
-	                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-	                            <div class="card">
-	                                <div class="card-body">
-	                                   <div class="d-inline-block">
-	                                        <h5 class="text-muted">후원액 현황!</h5>
-	                                        <%int diff_fund=goal_fund-cur_fund; %>
-	                                        <h3 class="mb-0"> <%=cur_fund %> 원 <br>(<%=diff_fund%> 원이 더 필요해요!)</h3>
-	                                    </div>
-	                                    <div class="float-right icon-circle-medium  icon-box-lg  bg-brand-light mt-1">
-	                                        <i class="fa fa-money-bill-alt fa-fw fa-sm text-brand"></i>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <!-- ============================================================== -->
-	                        <!-- end total followers   -->
-	                     
-	                    </div>
-	                    <!-- ============================================================== -->
-	                    <!-- end widgets   -->
-	                    <!-- ============================================================== -->
-	                    <div class="row">
-	                        <!-- ============================================================== -->
-	                        <!-- ============================================================== -->
-	                        <!-- followers by locations   -->
-	                        <!-- ============================================================== -->
-	                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-	                            <div class="card">
-	                                <h5 class="card-header"> 후원 상세 내용! </h5>
-	                                <div class="card-body">
-	                                    <!-- <canvas id="chartjs_bar_horizontal"></canvas> -->
-	                                	
-	                                	<iframe src="<%=content%>" frameborder="0" width="900" height="600" marginwidth="10" marginheight="10"  scrolling="yes"></iframe>
-	                                 </div>
-	                            </div>
-	                        </div>
-	                        <!-- ============================================================== -->
-	                        <!-- end followers by locations  -->
-	                        <!-- ============================================================== -->
-	                    </div>
-	                    <div class="row">
+
+	                    <div class="">
 	                        <!-- ============================================================== -->
 	                        <!-- campaign activities   -->
 	                        <!-- ============================================================== -->
@@ -488,17 +385,17 @@ function goMain(){
 	                                <div class="campaign-table table-responsive">
 	                                    <table class="table">
 	                                    	<colgroup>
-	                                    		<col width="20%"/>
-	                                    		<col width="80%"/>
+	                                    		<col width="20%">
+	                                    		<col width="80%">
 	                                    	</colgroup>
 	                                        <thead>
 	                                            <tr class="border-0">
 	                                                <th class="border-0">작성자</th>
-	                                                <th class="border-0">내용</th>
+	                                                <th class="border-0" colspan="2">내용</th>
 	                                            </tr>
 	                                        </thead>
 	                                        <tbody id="replyTB">      
-	                                                                           <%
+	                                         <%
 List<DTO_comment> list = (List<DTO_comment>)request.getAttribute("svcComment");
 for(int i=0;i<list.size();i++){
  	DTO_comment row_data = list.get(i);
@@ -513,19 +410,18 @@ for(int i=0;i<list.size();i++){
 	                                                <td>
 	                                                   <%=nickname_comment %>
 	                                                </td>
-	                                                <td>
+	                                                <td colspan="2">
 	                                                   <%=content_comment %></td>
 	                                            
 	                                            </tr>
 	                                            <%} %> 
-	                                             <tr>
-	                                            	<td><input class="form-control" rows="1" name="reg_nickname" width="20%"></input></td>
-	                                                <td><input class="form-control" rows="1" name="reg_content" width="80%"></input></td>
-	                                               
+	                                            <tr>
+	                                            	<td><input class="form-control" rows="1" name="reg_nickname"></input></td>
+	                                                <td><input class="form-control" rows="1" name="reg_content"></input></td>
 	                                            </tr>
-	                                        
 	                                        </tbody>
-	                                       <td><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
+	                                        <td></td>
+	                                        <td style="text-align:right;"><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
 	                                    </table>
 	                                </div>
 	                            </div>
@@ -553,7 +449,6 @@ for(int i=0;i<list.size();i++){
 					                                <a href="javascript: void(0);">About</a>
 					                                <a href="javascript: void(0);">Support</a>
 					                                <a href="javascript: void(0);">Contact Us</a>
-	
 					                            </div>
 					                        </div>
 					                    </div>
@@ -569,9 +464,6 @@ for(int i=0;i<list.size();i++){
 	                    </div>
 	                    <!-- ============================================================== -->
 	                    <!-- end main wrapper  --> <!-- ============================================================== -->
-	                    
-	                  
-	                    
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
     <script src="/resources/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
@@ -604,10 +496,6 @@ for(int i=0;i<list.size();i++){
     <script src="/resources/assets/libs/js/main-js.js"></script>
    <script src="/resources/board.js"></script>
    
-   
-
-  
-  
-
+ 
 </body>
 </html>

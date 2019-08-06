@@ -40,6 +40,16 @@ public class hellocontroller{
 		mav.addObject("svcComment",dtos);
 		return mav;
 	}
+	@GetMapping("/Intro")
+	public void Intro() {
+		
+		
+	}
+	@GetMapping("/Structure")
+	public void Structure() {
+		
+		
+	}
 	 
 	
 }
