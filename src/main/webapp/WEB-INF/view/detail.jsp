@@ -466,7 +466,7 @@ function goMain(){
 	                                <div class="card-body">
 	                                    <!-- <canvas id="chartjs_bar_horizontal"></canvas> -->
 	                                	
-	                                	<iframe src="<%=content%>" frameborder="0" width="900" height="300" marginwidth="0" marginheight="0"  scrolling="yes"></iframe>
+	                                	<iframe src="<%=content%>" frameborder="0" width="900" height="600" marginwidth="10" marginheight="10"  scrolling="yes"></iframe>
 	                                 </div>
 	                            </div>
 	                        </div>
@@ -486,6 +486,10 @@ function goMain(){
 	                            <div class="card">
 	                                <div class="campaign-table table-responsive">
 	                                    <table class="table">
+	                                    	<colgroup>
+	                                    		<col width="20%"/>
+	                                    		<col width="80%"/>
+	                                    	</colgroup>
 	                                        <thead>
 	                                            <tr class="border-0">
 	                                                <th class="border-0">작성자</th>
@@ -517,8 +521,8 @@ for(int i=0;i<list.size();i++){
 	                                        
 	                                        </tbody>
 	                                        <tr>
-	                                            	<td><input class="form-control" rows="1" name="reg_nickname" value=""></input></td>
-	                                                <td><input class="form-control" rows="1" name="reg_content" value=""></input></td>
+	                                            	<td><input class="form-control" rows="1" name="reg_nickname" width="20%"></input></td>
+	                                                <td><input class="form-control" rows="1" name="reg_content" width="80%"></input></td>
 	                                                <td><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
 	                                            </tr>
 	                                    </table>
