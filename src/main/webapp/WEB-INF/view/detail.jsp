@@ -92,7 +92,8 @@ cur_fund=<%=cur_fund%>;
   	    	} 
    	    	 
   	  	 		     html+=" </tr>";
-  			 
+  	  	 		html+="  <tr><td><input class=\"form-control\" rows=\"1\" name=\"reg_nickname\"></input></td>"; 
+	 		     html+=" <td><input class=\"form-control\" rows=\"1\" name=\"reg_content\"></input></td></tr>";
  			
   	    	 		  $("#replyTB").html(html);
   	    	
@@ -517,14 +518,14 @@ for(int i=0;i<list.size();i++){
 	                                            
 	                                            </tr>
 	                                            <%} %> 
-	                                            
-	                                        
-	                                        </tbody>
-	                                        <tr>
+	                                             <tr>
 	                                            	<td><input class="form-control" rows="1" name="reg_nickname" width="20%"></input></td>
 	                                                <td><input class="form-control" rows="1" name="reg_content" width="80%"></input></td>
-	                                                <td><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
+	                                               
 	                                            </tr>
+	                                        
+	                                        </tbody>
+	                                       <td><a href='javascript:addReply(<%=id%>);'><button type="button" class="btn btn-primary">등록!</button></a></td>
 	                                    </table>
 	                                </div>
 	                            </div>
