@@ -25,7 +25,7 @@ public class svcRestController {
 	DAO_comment tableDAO_comment=new DAO_comment();
 	ArrayList<DTO_comment> dtos=tableDAO_comment.memberSelect(id);
 	dtos=tableDAO_comment.Add_comment(id,nickname,content);
-	System.out.print(dtos);
+	//System.out.print(dtos);
 	return dtos;
 	}
 	
