@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet; 
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class DAO_comment{
 	private String url="jdbc:h2:mem:testdb";
@@ -71,7 +74,9 @@ public class DAO_comment{
 	}
 	public ArrayList<DTO_comment> Add_comment(int idx,String reg_nickname, String reg_content){
 		ArrayList<DTO_comment> dtos=new ArrayList<DTO_comment>();
-		
+		Date today=new Date();
+		SimpleDateFormat date= new SimpleDateFormat("yyyy-MM-dd");
+
 		
 		Connection con=null;
 		Statement stmt=null;
@@ -91,7 +96,7 @@ public class DAO_comment{
 		             .append("' , '")
 		             .append(reg_content)
 		             .append("' , '")
-		             .append("2019-01-03")
+		             .append(date.format(today))
 		             .append("');").toString();
 		  
 	    	 
