@@ -305,7 +305,7 @@ function goMain(){
 								                                <div class="card-body">
 								                                    <!-- <canvas id="chartjs_bar_horizontal"></canvas> -->
 								                                	
-								                                	<iframe src="<%=content%>" frameborder="0" width="90%" height="600" marginwidth="10" marginheight="10"  scrolling="yes"></iframe>
+								                                	<iframe src="<%=content%>" frameborder="0" width="100%" height="600" marginwidth="10" marginheight="10"  scrolling="yes"></iframe>
 								                                 </div>
 								                            </div>
 								                        </div>
@@ -350,14 +350,16 @@ function goMain(){
 	                            <div class="card">
 	                                <div class="campaign-table table-responsive">
 	                                    <table class="table">
-	                                    	<colgroup>
+	                                    	<!-- <colgroup>
 	                                    		<col width="20%">
-	                                    		<col width="80%">
-	                                    	</colgroup>
+	                                    		<col width="100%">
+	                                    		<col width="20%">
+	                                    	</colgroup> -->
 	                                        <thead>
-	                                            <tr class="border-0">
-	                                                <th class="border-0">작성자</th>
-	                                                <th class="border-0" colspan="2">내용</th>
+	                                            <tr class="border-0" >
+	                                                <th class="border-0" width="20%">작성자</th>
+	                                                <th class="border-0" width="65%">내용</th>
+	                                                <th class="border-0" width="15%">등록시간</th>   
 	                                            </tr>
 	                                        </thead>
 	                                        <tbody id="replyTB">      
@@ -376,14 +378,18 @@ for(int i=0;i<list.size();i++){
 	                                                <td>
 	                                                   <%=nickname_comment %>
 	                                                </td>
-	                                                <td colspan="2">
+	                                                <td >
 	                                                   <%=content_comment %></td>
-	                                            
+	                                            	<td >
+	                                                   <%=reg_date_comment%>
+	                                                </td>
+	                 
 	                                            </tr>
 	                                            <%} %> 
 	                                            <tr>
 	                                            	<td><input class="form-control" rows="1" name="reg_nickname"></input></td>
 	                                                <td><input class="form-control" rows="1" name="reg_content"></input></td>
+	                                                <td> </td>
 	                                            </tr>
 	                                        </tbody>
 	                                        <td></td>
