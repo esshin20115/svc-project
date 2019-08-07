@@ -330,7 +330,7 @@ function goMain(){
 															<tbody>
 																<tr class="border-0">
 					                                                <td class="border-0" id="likeNum"> <b><%=likes %></b> 명이 이 후원을 좋아해요! &nbsp;&nbsp; </td>
-					                                        	    <td class="border-0" aligh="right" margin-right="20px">공유하기  <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')">&nbsp;&nbsp;<img src="resources/assets/images/facebook.png"/></a>  </td>
+					                                        	    <td class="border-0" aligh="right" margin-right="20px">공유하기  <a href="javascript:sharetwitter('localhost:80/id=1','공유하기 예제')"><img src="resources/assets/images/twitter.png"/></a><a href="javascript:sharefacebook('localhost:80/id=1','공유하기 예제')">&nbsp;&nbsp;<img src="resources/assets/images/facebook.jpg"/></a>  </td>
 					                                            </tr>
 					                                            <tr>
 					                                            	<td><b>이 후원이 좋아요!<a href="javascript:plusLike(<%=id%>);"><img src="resources/assets/images/thumb.png"/></a></b></td>																											
