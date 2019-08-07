@@ -88,12 +88,14 @@ cur_fund=<%=cur_fund%>;
  			for(var i=0; i<data.length; i++){
 	     		html += "<tr><td>"; 
   	    		html += data[i].nickname+"</td><td>";
-  	    		html += data[i].content+"</td></tr>"; 
+  	    		html += data[i].content+"</td><td>";
+  	    		html += data[i].reg_date+"</td></tr>";
   	    	} 
    	    	 
   	  	 		     html+=" </tr>";
   	  	 		html+="  <tr><td><input class=\"form-control\" rows=\"1\" name=\"reg_nickname\"></input></td>"; 
-	 		     html+=" <td><input class=\"form-control\" rows=\"1\" name=\"reg_content\"></input></td></tr>";
+	 		     html+=" <td><input class=\"form-control\" rows=\"1\" name=\"reg_content\"></input></td>";
+	 		     
  			
   	    	 		  $("#replyTB").html(html);
   	    	
